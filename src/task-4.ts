@@ -1,23 +1,19 @@
-/* Task */
-function printUserInfo(name, age, email) {
-  console.log("Name:", name);
-  console.log("Age:", age);
-  if (email) {
-    console.log("Email:", email);
-  }
+const usernames: string[] = ["alice", "bob", "charlie"];
+
+const ratings: number[] = [4.5, 3.8, 5];
+
+interface Product {
+  id: number;
+  title: string;
 }
 
-printUserInfo("Alice", 30);
-printUserInfo("Bob", 25, "bob@mail.com");
+const products: Product[] = [
+  { id: 1, title: "Phone" },
+  { id: 2, title: "Laptop" },
+];
 
-/* Decision */
-function printUserInfo(name: string, age: number, email?: string): void {
-  console.log("Name:", name);
-  console.log("Age:", age);
-  if (email) {
-    console.log("Email:", email);
-  }
-}
+console.log(`Usernames: ${JSON.stringify(usernames)}`);
+console.log(`Ratings: ${JSON.stringify(ratings)}`);
+console.log(`Products: ${JSON.stringify(products)}`); 
 
-printUserInfo("Alice", 30);
-printUserInfo("Bob", 25, "bob@mail.com");
+export {};
